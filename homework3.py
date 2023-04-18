@@ -1,18 +1,12 @@
-n = int(input('Введите кол-во элементов в массиве: '))
-lst = []
-for i in range(n):
-    number = lst.append(int(input(f"Введите {i+1}-е число в массив: ")))
+PointsForLetters = {'АВЕНОРСТAEIOULNSTR': 1, 'ДКЛМПУDG': 2,
+                    'БГЁЬЯBCMP': 3, 'ЙЫFHVWY': 4, 'ЖЗХЦЧK': 5, 'ШЭЮJX': 8, 'ФЩЪQZ': 10}
 
-x = int(input('Введите число X: '))
-while(lst.count(x)!=0):
-    x = int(input('Неверно! Число не должно содержать в массиве! Введите число X: '))
-smallestDiff=abs(lst[0]-x)
-nearestElement=lst[0]
-for j in lst:
-    if abs(j-x)<smallestDiff:
-        smallestDiff=abs(j-x)
-        nearestElement=j
-print(nearestElement)
+word = input('введите слово: ')
 
-    
+pointsCounter = 0
+for i in word:
+    for j in PointsForLetters.keys():
+        if i in j:
+            pointsCounter += PointsForLetters.get(j)
 
+print(pointsCounter)
