@@ -5,7 +5,7 @@ for i in range(n):
 
 x = int(input('Введите число X: '))
 while(lst.count(x)!=0):
-    x = int(input('Неверно! Число не должно содержать в массиве! Введите число X: '))
+    x = int(input('Неверно! Число не должно содержаться в массиве! Введите число X: '))
 smallestDiff=abs(lst[0]-x)
 nearestElement=lst[0]
 for j in lst:
